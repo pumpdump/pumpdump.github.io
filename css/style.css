@@ -15,8 +15,22 @@ body {
   border: 1px solid #999;
 }
 
+  .calculator h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
 textarea {
   width: 100%;
-  height: 200px;
+  min-height: 200px;
   margin: 20px 0;
+  resize: vertical;
+}
+
+.instruction li {
+  margin-bottom: 10px;
+}
+
+.instruction li img {
+  margin-top: 10px;
 }

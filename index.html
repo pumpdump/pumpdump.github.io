@@ -3,23 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <title>Калькулятор среднего закупа и продажи, а так же итогового профита (YoBit)</title>
-  <link type="text/css" href="/css/style.css" media="all" rel="stylesheet">
+  <link type="text/css" href="css/style.css" media="all" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="js/script.js"></script>
 </head>
 <body>
   <div class="desc">
-    <h2>PumpTeamGroup</h2>
+    <h2>При поддержке PumpTeamGroup</h2>
     <p>Присоединяйся к нашему каналу в Telegram и ежедневно учавствуй в мощных пампах, <br/> приносящих нашим участникам от 10% до 200% каждый день!</p>
     <p><a href="https://t.me/PumpTeamGroup">https://t.me/PumpTeamGroup</a></p>
-    <p>Наш сайт: <a href="http://pumpteamgroup.com/">http://pumpteamgroup.com</a></p>
+    <p><a href="http://pumpteamgroup.com/">http://pumpteamgroup.com</a></p>
   </div>
 
   <div class="calculator">
-    Вставьте код:
+    <h1>Калькулятор среднего закупа и продажи, а так же итогового профита (YoBit)</h1>
+    Вставить код сюда:
     <textarea id="code"></textarea>
     <button id="calculate">Посчитать результат</button>
     <div id="result"></div>
+  </div>
+
+  <div class="instruction">
+    <h2>Инструкция</h2>
+    <p>Для 100% работы необходима последняя версия браузера. Предпочтительнее использовать <strong>Google Chrome</strong>!</p>
+    <ol>
+      <li>Открыть историю в личном кабинете YoBit</li>
+      <li>Выставить фильтр по интересующей монете</li>
+      <li>Начать выделять текст на странице начиная со слова "ИСТОРИЯ" (или "HISTORY")<br/><img src="img/1.png"/></li>
+      <li>Выделить все вплоть до постраничной навигации (включительно)<br/><img src="img/2.png"/></li>
+      <li>Скопировать в буфер обмена (Ctrl+C)</li>
+      <li>Вставить в поле выше<br/><img src="img/3.png"/></li>
+      <li>Если у вас на одной странице оказались сделки от других дат, то вручную удалите лишние ордера (построчно)<br/><img src="img/4.png"/></li>
+      <li>Нажать кнопку "Посчитать результат"<br/><img src="img/5.png"/></li>
+    </ol>
   </div>
 </body>
 </html>
