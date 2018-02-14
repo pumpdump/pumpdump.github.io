@@ -50,7 +50,7 @@ function calculate (code) {
   }
 
   if (totalSell.orders) {
-    text += '<h2>Покупки SELL</h2>';
+    text += '<h2>Продажи SELL</h2>';
     text += `Средняя цена: ${(totalSell.price/totalSell.orders).toFixed(8)}<br>`;
     text += `Общее кол-во монет: ${totalSell.amount.toFixed(8)}<br>`;
     text += `Всего получено BTC: ${totalSell.btc.toFixed(8)}<br>`;
