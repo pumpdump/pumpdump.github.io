@@ -26,7 +26,9 @@ $(function () {
 function calculate (code) {
   let orders = code
     .replace(/\n+/g, '\n').replace(/\n/g, ' ').replace(/\s+/g, ' ')
-    .replace(/^.+?(\d\d\d\d-\d\d-\d\d.+)/, '$1').split(' ');
+    .replace(/^.+?(\d+-\d+-\d+.+)/, '$1')
+    .replace(/(\d+\.\d+ \d+\.\d+ \d+\.\d+).{2,}?(\d+-\d+-\d+)/g, '$1$2')
+    .split(' ');
 
   $('#result').html(orders);
 
