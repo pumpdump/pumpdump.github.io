@@ -1,4 +1,22 @@
+body {
+  min-width: 800px;
+  margin: 0 auto;
+  padding: 20px
+}
+
+.desc {
+  text-align: center;
+}
+
+.calculator {
+  margin: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  border: 1px solid #999;
+}
+
 textarea {
   width: 100%;
   height: 200px;
+  margin: 20px 0;
 }
