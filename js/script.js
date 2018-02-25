@@ -46,14 +46,14 @@ function calculate (code) {
 
   if (totalBuy.orders) {
     text += '<h2>Покупки BUY</h2>';
-    text += `Средняя цена: ${(totalBuy.price/totalBuy.orders).toFixed(8)}<br>`;
+    text += `Средняя цена: ${(totalBuy.btc/totalBuy.amount).toFixed(8)}<br>`;
     text += `Общее кол-во монет: ${totalBuy.amount.toFixed(8)}<br>`;
     text += `Всего потрачено BTC: ${totalBuy.btc.toFixed(8)}<br>`;
   }
 
   if (totalSell.orders) {
     text += '<h2>Продажи SELL</h2>';
-    text += `Средняя цена: ${(totalSell.price/totalSell.orders).toFixed(8)}<br>`;
+    text += `Средняя цена: ${(totalSell.btc/totalSell.amount).toFixed(8)}<br>`;
     text += `Общее кол-во монет: ${totalSell.amount.toFixed(8)}<br>`;
     text += `Всего получено BTC: ${totalSell.btc.toFixed(8)}<br>`;
   }
@@ -89,14 +89,16 @@ function reset () {
     orders: 0,
     price: 0,
     amount: 0,
-    btc: 0
+    btc: 0,
+    orderPrice: 0
   };
 
   totalSell = {
     orders: 0,
     price: 0,
     amount: 0,
-    btc: 0
+    btc: 0,
+    orderPrice: 0
   };
 
   lastIndex = 0;
