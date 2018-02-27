@@ -26,7 +26,7 @@ $(function () {
 function calculate (code) {
   let orders = code
     .replace(/\n+/g, '\n').replace(/\n/g, ' ').replace(/\s+/g, ' ')
-    .replace(/^.+?(\d+-\d+-\d+.+)/, '$1')
+    .replace(/^.*?(\d+-\d+-\d+.+)/, '$1')
     .replace(/(\d+\.\d+ \d+\.\d+ \d+\.\d+).{2,}?(\d+-\d+-\d+)/g, '$1$2')
     .split(' ');
 
@@ -61,9 +61,10 @@ function calculate (code) {
   if (totalBuy.orders && totalSell.orders) {
     let ratio = totalSell.btc / totalBuy.btc;
     let percent = Math.round(ratio < 1 ? 100 - (100 * (ratio)) : (100 * ratio) - 100)
+    let amount = totalBuy.amount - totalSell.amount;
 
     text += `<h2 id="profit">Итог: ${(ratio < 1 ? '-' : '') + percent + '%'}</h2>`;
-    text += `Всего монет осталось: ${(totalBuy.amount - totalSell.amount).toFixed(8)}<br>`;
+    text += `Всего монет осталось: ${(amount < 0.000000 ? 0 : amount).toFixed(8)}<br>`;
     text += `${ratio < 1 ? 'Убыток' : 'Профит'}: ${(totalSell.btc - totalBuy.btc).toFixed(8)} BTC`
   }
 
